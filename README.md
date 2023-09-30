@@ -1,3 +1,3 @@
 # Portfolio
 
-used react icons
+used react icons, three.js, next.js, typescript,framer motion
