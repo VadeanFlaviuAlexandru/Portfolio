@@ -1,8 +1,8 @@
+import duck from "@/public/duck.jpg";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import duck from "@/public/duck.jpg";
 
 export const links = [
   {
