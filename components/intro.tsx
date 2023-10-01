@@ -9,9 +9,11 @@ import { FaGithubSquare } from "react-icons/fa";
 import { GrContactInfo } from "react-icons/gr";
 import { useSectionInView } from "../lib/hooks";
 import { DuckMailGirl } from "./3d_models/DuckMailGirl";
+import { UseActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = UseActiveSectionContext();
 
   return (
     <section ref={ref} id="home" className="scroll-mt-[100rem]">
@@ -79,6 +81,10 @@ export default function Intro() {
                         py-3 flex items-center gap-2 outline-none focus:scale-100  
                         hover:bg-gray-950 active:scale-105 transition"
             href="#contact"
+            onClick={() => {
+              setActiveSection("Contact");
+              setTimeOfLastClick(Date.now());
+            }}
           >
             Contact me
             <BsArrowRight
