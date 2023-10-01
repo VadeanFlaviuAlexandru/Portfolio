@@ -1,17 +1,14 @@
-import About from "@/components/about";
-import Contact from "@/components/contact";
-import Experience from "@/components/experience";
-import SectionDivider from "@/components/generic_components/section-divider";
-import Intro from "@/components/intro";
-import Projects from "@/components/projects";
-import Skills from "@/components/skills";
+import SectionDivider from "@/components/generic-components/section-divider";
+import About from "@/components/main-components/about";
+import Contact from "@/components/main-components/contact";
+import Experience from "@/components/main-components/experience";
+import Intro from "@/components/main-components/intro";
+import Projects from "@/components/main-components/projects";
+import Skills from "@/components/main-components/skills";
 
 export default function Home() {
   return (
-    <main
-      className="flex min-h-screen flex-col
-     items-center justify-between p-24"
-    >
+    <main className="flex flex-col items-center px-4">
       <Intro />
       <SectionDivider />
       <About />
