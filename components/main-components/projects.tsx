@@ -2,10 +2,10 @@
 
 import { projectsData, projectsDataSecondPage } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
+import { StaticImageData } from "next/image";
 import React, { useState } from "react";
 import Project from "../generic-components/project";
 import SectionHeading from "../generic-components/section-heading";
-import { StaticImageData } from "next/image";
 
 interface project {
   title: string;
@@ -28,12 +28,21 @@ export default function Projects() {
       <div className="flex flex-col justify-center items-center">
         <SectionHeading>My projects 📚</SectionHeading>
         <p
-          className="max-w-[41rem] text-center leading-8 
+          className="max-w-[40rem] text-center leading-8 
       scroll-mt-28 m-10 text-xl"
         >
-          If a project captures your interest, feel free to visit its GitHub
-          page. There, you'll discover the complete details accompanied by
-          screenshots!
+          If a project captures your interest, feel free to visit its{" "}
+          <span className="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+            GitHub page
+          </span>
+          . You'll discover the{" "}
+          <span className="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+            complete details
+          </span>{" "}
+          accompanied by{" "}
+          <span className="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+            screenshots!
+          </span>{" "}
         </p>
       </div>
       <div>
@@ -50,7 +59,7 @@ export default function Projects() {
         gap-2 rounded-full outline-none focus:scale-110 
         hover:scale-110 active:scale-105 transition cursor-pointer 
         borderBlack dark:bg-white/10 dark:text-white
-        mt-5"
+        mt-20"
             onClick={() => {
               setSecondPage(true);
               setProjects((projects) => [
@@ -59,7 +68,7 @@ export default function Projects() {
               ]);
             }}
           >
-            show more
+            Show more projects
           </button>
         </div>
       )}

@@ -3,7 +3,6 @@ import RockPaperScissors from "@/public/projects/RockPaperScissors.png";
 import TerraTech from "@/public/projects/TerraTech.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
 export const links = [
@@ -38,7 +37,7 @@ export const experiencesData = [
     title: "Faculty of Mathematics and Computer Science",
     location: "Babes-Bolyai University",
     description:
-      "I graduated the Faculty of Mathematics and Computer Science in English at Babes-Bolyai University.",
+      "- I graduated the Faculty of Mathematics and Computer Science in English at Babes-Bolyai University.",
     icon: React.createElement(LuGraduationCap),
     date: "2020 - 2023",
   },
@@ -46,16 +45,16 @@ export const experiencesData = [
     title: "Apprentice Web Developer",
     location: "Transart",
     description:
-      "Enrolled in Transart's apprenticeship program to gain foundational knowledge in JavaScript, databases, and REST APIs. Created various CRUD projects using Google's Firebase, Dexie.js, andASP.NET.",
+      "- Enrolled in Transart's apprenticeship program to gain foundational knowledge in JavaScript, databases, and REST APIs. <br /> - Created various CRUD projects using Google's Firebase, Dexie.js, and ASP.NET.",
     icon: React.createElement(CgWorkAlt),
     date: "07/2022 – 08/2022",
   },
   {
-    title: "Intern - Full Stack Web Developer",
+    title: "Intern - Full-Stack Web Developer",
     location: "Cicada Technologies",
     description:
-      "Developed and rigorously tested components and features for Next.js projects, simultaneously handling backend development using Python, REST APIs, and PostgreSQL. Designed an automatic program that utilizes AI to extract specific data from PDF and Excel files, alongside studying the technology. Constructed an automated Python tool for extracting and exporting data from Trello boards into Excel files.",
-    icon: React.createElement(FaReact),
+      "- Developed and rigorously tested components and features for Next.js projects, simultaneously handling backend development using Python, REST APIs, and PostgreSQL.<br /> - Designed an automatic program that utilizes AI to extract specific data from PDF and Excel files, alongside studying the technology.<br /> - Constructed an automated Python tool for extracting and exporting data from Trello boards into Excel files.",
+    icon: React.createElement(CgWorkAlt),
     date: "04/2023 – 08/2023",
   },
 ] as const;
@@ -105,10 +104,23 @@ export const skillsDataComfortable = [
   "React Redux",
   "React Router",
   "Next.js",
-  "Java",
-  "Python",
-  "HTML",
-  "CSS",
+  "Phaser 3",
+  "SCSS",
+  "Material UI",
+  "Git",
+  "Swagger / Postman",
+  "Java / Spring Boot",
 ] as const;
 
-export const skillsDataFam = ["PostgreSQL", "Framer Motion"] as const;
+export const skillsDataPast = [
+  "Docker",
+  "Angular",
+  "Tailwind",
+  "Python",
+  "PostgreSQL",
+  "MS SQL",
+  "RabbitMQ",
+  "Langchain",
+  "Large Language Models",
+  "AI",
+] as const;
