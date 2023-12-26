@@ -1,4 +1,6 @@
 import Harap from "@/public/projects/Harap.png";
+import RockPaperScissors from "@/public/projects/RockPaperScissors.png";
+import TerraTech from "@/public/projects/TerraTech.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
@@ -62,21 +64,51 @@ export const projectsData = [
   {
     title: "Povestea lui Harap-Alb",
     description:
-      "A playable demo of the famous romanian folktale: Povestea lui Harap-Alb.",
-    tags: ["Phaser"],
+      "A full-stack web application featuring authentication, inviting users to play a pixelated top-down 2D game demo inspired by the renowned Romanian folklore, 'Povestea lui Harap-Alb'. Along the way, they can engage in various mini-games to achieve high scores for a chance to appear on the leaderboards.",
+    tags: ["React Router & Redux", "Spring Boot", "Material UI", "Phaser"],
+    githubLink:
+      "https://github.com/VadeanFlaviuAlexandru/Bachelor_Project___Povestea_Lui_HarapAlb",
     imageUrl: Harap,
+    DemoButton: true,
+    demo: "https://povestea-lui-harap-alb.netlify.app/",
   },
-] as const;
+  {
+    title: "TerraTech",
+    description:
+      "A full-stack web application simulating the management of a company branch, with distinct user roles, including Admin, Manager, and Employee. The main focus is on user-friendly CRUD operations and comprehensive statistics across multiple teams.",
+    tags: ["React Router & Redux", "TypeScript", "Spring Boot"],
+    githubLink: "https://github.com/VadeanFlaviuAlexandru/TerraTech",
+    imageUrl: TerraTech,
+    DemoButton: false,
+    demo: "",
+  },
+];
 
-export const skillsDataPro = [
-  "HTML",
-  "CSS",
+export const projectsDataSecondPage = [
+  {
+    title: "Rock Paper Scissors ",
+    description:
+      "My first personal project aimed to understand CSS, HTML, and JavaScript—a local rock-paper-scissors game implemented in JavaScript, featuring client-side storage and incorporating various fun packages.",
+    tags: ["JavaScript", "Dexie.js", "Bootstrap"],
+    githubLink:
+      "https://github.com/VadeanFlaviuAlexandru/Bachelor_Project___Povestea_Lui_HarapAlb",
+    imageUrl: RockPaperScissors,
+    DemoButton: true,
+    demo: "https://therockthepapertheschissors.netlify.app/",
+  },
+];
+
+export const skillsDataComfortable = [
   "JavaScript",
   "TypeScript",
   "React",
+  "React Redux",
+  "React Router",
   "Next.js",
-  "Git",
+  "Java",
   "Python",
+  "HTML",
+  "CSS",
 ] as const;
 
 export const skillsDataFam = ["PostgreSQL", "Framer Motion"] as const;

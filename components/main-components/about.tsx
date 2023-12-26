@@ -10,7 +10,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className=" max-w-[45rem] text-center leading-8 
+      className="font-mulish max-w-[45rem] text-center leading-8 
       scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
@@ -18,15 +18,31 @@ export default function About() {
       id="about"
     >
       <SectionHeading>About me ✨</SectionHeading>
-      <p className="mb-3">
-        I've had a lifelong appreciation for art, and technology has opened up
-        exciting avenues for creative expression for not just myself but for
-        everyone. Over time, my curiosity about the inner workings and
-        underlying principles grew. Naturally, I embarked on a journey in
-        computer science. Upon completing my studies in computer science and
-        mathematics at Babes-Bolyai University, I discovered the beautiful
-        synergy of merging my two passions: the world of art and the realm of
-        technology.
+      <p className="mb-3 text-xl">
+        Ever since I was young, technology has always been full of surprises for
+        me. Although a common experience for everybody, from video games to CGI
+        in entertainment, I was personally{" "}
+        <span className="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+          intrigued to hear how things worked.
+        </span>
+        <br />
+        <br />
+        Because of this, the accessibility to express yourself, I believe it's
+        the reason I've picked up a lot of{" "}
+        <span className="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+          hobbies{" "}
+        </span>
+        over the years. Well, not that many, but from learning to play the
+        ukulele, painting, skateboarding (I still can't do tricks), to
+        eventually editing, writing music and stories, making video games and
+        web applications,{" "}
+        <span className="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+          I've always enjoyed the journey
+        </span>
+        , especially since I like to share what I do with my close friends.
+        Occasionally, when it comes to my personal GitHub projects, it's a
+        love-hate relationship because of the bugs I stumble upon, but I manage
+        in the end.
       </p>
     </motion.section>
   );

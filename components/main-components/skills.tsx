@@ -1,6 +1,6 @@
 "use client";
 
-import { skillsDataPro, skillsDataFam } from "@/lib/data";
+import { skillsDataComfortable, skillsDataFam } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import SectionHeading from "../generic-components/section-heading";
@@ -28,12 +28,12 @@ export default function Skills() {
       ref={ref}
       className="max-w-[53rem] scroll-mt-28 text-center "
     >
-      <SectionHeading>What I'm proficient with</SectionHeading>
+      <SectionHeading>What I'm very comfortable with</SectionHeading>
       <ul
         className="mb-10 flex flex-wrap justify-center gap-2 text-lg
       text-gray-800"
       >
-        {skillsDataPro.map((skill, index) => (
+        {skillsDataComfortable.map((skill, index) => (
           <motion.li
             className="bg-white borderBlack rounded-xl px-5 py-3 
             dark:bg-white/10 dark:text-white/80"

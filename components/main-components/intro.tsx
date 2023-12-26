@@ -13,6 +13,7 @@ import {
 } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { DuckPond } from "../3d-models/DuckPond";
+import "./intro.scss";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -50,22 +51,37 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium 
-        !leading-[1.5] sm:text-4xl"
+        className="font-mulish mb-10 mt-4 px-4 text-2xl font-medium 
+        !leading-[1.5] sm:text-4xl max-w-1.25/2"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span>
-          Hi! I'm <span className="font-bold">Alex</span> 👋
+          Hello <span className="hand inline-block">👋</span> I'm{" "}
+          <span className="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+            Alex
+          </span>
         </span>
-        <br />I have a <span className="font-bold">deep appreciation</span> for{" "}
-        <span className="font-bold">art</span> and{" "}
-        <span className="font-bold">technology</span>, mainly focusing on{" "}
-        <span className="font-bold">full stack web development</span>
+        <br />I have a{" "}
+        <span className="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+          deep appreciation
+        </span>{" "}
+        for{" "}
+        <span className="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+          art
+        </span>{" "}
+        and{" "}
+        <span className="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+          technology
+        </span>
+        , which is why I like building{" "}
+        <span className="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+          full-stack web applications.
+        </span>
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center 
+        className="font-mulish flex flex-col sm:flex-row items-center 
         justify-center gap-5 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -75,10 +91,10 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 
+          className="group bg-black text-white px-7 py-3 
           flex items-center gap-2 rounded-full outline-none 
-          focus:scale-110 hover:scale-110 hover:bg-gray-950 
-          active:scale-105 transition"
+          focus:scale-110 hover:scale-110 hover:bg-black/95
+          active:scale-105 transition font-xl dark:bg-white dark:text-black"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -92,19 +108,19 @@ export default function Intro() {
           className="group bg-white px-7 py-3 flex items-center 
           gap-2 rounded-full outline-none focus:scale-110 
           hover:scale-110 active:scale-105 transition cursor-pointer 
-          borderBlack dark:bg-white/10"
+          borderBlack dark:bg-white/10 dark:text-white"
           href="../../public/cv.pdf"
         >
           Check my CV
-          <BsFillPersonLinesFill className="opacity-60 group-hover:translate-x-2 transition" />
+          <BsFillPersonLinesFill className="dark:text-white group-hover:translate-x-2 transition" />
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 
+          className="bg-white p-4
           hover:text-gray-950 flex items-center gap-2 rounded-full 
           focus:scale-[1.15] hover:scale-[1.15] active:scale-105 
           transition cursor-pointer borderBlack dark:bg-white/10
-          dark:text-white/60"
+          dark:text-white"
           href="https://www.linkedin.com/in/alexvad/"
           target="_blank"
         >
@@ -112,11 +128,11 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center
+          className="bg-white p-4 flex items-center
           gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] 
           hover:scale-[1.15] hover:text-gray-950 active:scale-105
           transition cursor-pointer borderBlack 
-          dark:bg-white/10 dark:text-white/60"
+          dark:bg-white/10 dark:text-white"
           href="https://github.com/VadeanFlaviuAlexandru"
           target="_blank"
         >
