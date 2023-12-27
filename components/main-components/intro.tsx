@@ -12,7 +12,7 @@ import {
   BsLinkedin,
 } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
-import { DuckPond } from "../3d-models/DuckPond";
+import { DuckPond } from "../3d-model/DuckPond";
 import "./intro.scss";
 
 export default function Intro() {

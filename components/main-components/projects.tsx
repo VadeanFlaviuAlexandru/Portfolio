@@ -2,8 +2,9 @@
 
 import { projectsData, projectsDataSecondPage } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { StaticImageData } from "next/image";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Project from "../generic-components/project";
 import SectionHeading from "../generic-components/section-heading";
 
@@ -22,6 +23,13 @@ export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
   const [secondPage, setSecondPage] = useState(false);
   const [projects, setProjects] = useState<project[]>(projectsData);
+  const refer = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: refer,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
     <section ref={ref} id="projects" className="font-mulish scroll-mt-28">
@@ -53,7 +61,11 @@ export default function Projects() {
         ))}
       </div>
       {!secondPage && (
-        <div className="flex justify-center items-center">
+        <motion.div
+          ref={refer}
+          style={{ scale: scaleProgess, opacity: opacityProgess }}
+          className="flex justify-center items-center"
+        >
           <button
             className="group bg-white px-7 py-3 flex items-center 
         gap-2 rounded-full outline-none focus:scale-110 
@@ -68,9 +80,9 @@ export default function Projects() {
               ]);
             }}
           >
-            Show more projects
+            I can also show some older projects...
           </button>
-        </div>
+        </motion.div>
       )}
     </section>
   );

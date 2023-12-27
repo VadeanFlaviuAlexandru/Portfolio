@@ -109,18 +109,30 @@ export const skillsDataComfortable = [
   "Material UI",
   "Git",
   "Swagger / Postman",
-  "Java / Spring Boot",
+  "Java",
+  "Spring Boot",
 ] as const;
 
 export const skillsDataPast = [
-  "Docker",
   "Angular",
   "Tailwind",
   "Python",
   "PostgreSQL",
   "MS SQL",
+  "Docker",
   "RabbitMQ",
   "Langchain",
   "Large Language Models",
   "AI",
+] as const;
+
+export const skillsDataMiscellaneous = [
+  "Programming",
+  "Content creation",
+  "Technology",
+  "Communication",
+  "Teamwork",
+  "Flexibility",
+  "Problem-Solving",
+  "Open-Mindedness",
 ] as const;
