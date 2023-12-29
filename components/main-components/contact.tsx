@@ -6,9 +6,50 @@ import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import SectionHeading from "../generic-components/section-heading";
 import SubmitBtn from "../generic-components/submit-btn";
+import { useState } from "react";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const [formData, setFormData] = useState({
+    senderEmail: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!emailRegex.test(formData.senderEmail)) {
+      toast.error("Please enter a valid e-mail. 😔");
+      return;
+    }
+
+    const formDataForApi = new FormData();
+    formDataForApi.append("senderEmail", formData.senderEmail);
+    formDataForApi.append("message", formData.message);
+
+    const { data, error } = await sendEmail(formDataForApi);
+
+    if (error) {
+      toast.error(error);
+      return;
+    }
+
+    toast.success("Email sent successfully! Thank you ✨");
+
+    setFormData({
+      senderEmail: "",
+      message: "",
+    });
+  };
 
   return (
     <motion.section
@@ -24,16 +65,7 @@ export default function Contact() {
 
       <form
         className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-
-          if (error) {
-            toast.error(error);
-            return;
-          }
-
-          toast.success("Email sent successfully!");
-        }}
+        onSubmit={handleSubmit}
       >
         <input
           className="h-14 px-4 rounded-lg borderBlack dark:bg-white
@@ -41,14 +73,18 @@ export default function Contact() {
           dark:outline-none placeholder:text-black"
           name="senderEmail"
           type="email"
+          value={formData.senderEmail}
+          onChange={handleChange}
           required
           maxLength={500}
           placeholder="Your email"
         />
         <textarea
           className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80
-           dark:focus:bg-opacity-100 transition-all dark:outline-none placeholder:text-black"
+          dark:focus:bg-opacity-100 transition-all dark:outline-none placeholder:text-black"
           name="message"
+          value={formData.message}
+          onChange={handleChange}
           placeholder="Your message"
           required
           maxLength={5000}
