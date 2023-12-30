@@ -13,9 +13,8 @@ interface project {
   description: string;
   tags: string[];
   githubLink: string;
-  imageUrl: StaticImageData;
-  DemoButton: boolean;
-  demo: string;
+  imageUrl: StaticImageData | null;
+  demo: string | null;
 }
 [];
 

@@ -38,7 +38,7 @@ export const experiencesData = [
     title: "Faculty of Mathematics and Computer Science",
     location: "Babes-Bolyai University",
     description:
-      "- I graduated the Faculty of Mathematics and Computer Science in English at Babes-Bolyai University.",
+      "- I graduated the Faculty of Mathematics and Computer Science in English at Babes-Bolyai University. <br /> - Covered the basics in various programming languages, including Python, C++, Java, Bash, and SQL.",
     icon: React.createElement(LuGraduationCap),
     date: "2020 - 2023",
   },
@@ -46,7 +46,7 @@ export const experiencesData = [
     title: "Apprentice Web Developer",
     location: "Transart",
     description:
-      "- Enrolled in Transart's apprenticeship program to gain foundational knowledge in JavaScript, databases, and REST APIs. <br /> - Created various CRUD projects using Google's Firebase, Dexie.js, and ASP.NET.",
+      "- Joined Transart's apprenticeship program to gain foundational knowledge in JavaScript, databases, and REST APIs. <br /> - Developed several CRUD projects using Google's Firebase, Dexie.js, and ASP.NET.",
     icon: React.createElement(CgWorkAlt),
     date: "07/2022 – 08/2022",
   },
@@ -54,7 +54,7 @@ export const experiencesData = [
     title: "Intern - Full-Stack Web Developer",
     location: "Cicada Technologies",
     description:
-      "- Developed and rigorously tested components and features for Next.js projects, simultaneously handling backend development using Python, REST APIs, and PostgreSQL.<br /> - Designed an automatic program that utilizes AI to extract specific data from PDF and Excel files, alongside studying the technology.<br /> - Constructed an automated Python tool for extracting and exporting data from Trello boards into Excel files.",
+      "- Developed and tested components and features for Next.js projects, while also handling backend development using Python, REST APIs, and PostgreSQL. <br /> - Developed an automatic program using Python that utilizes AI to extract specific data from PDF and Excel files, alongside studying the technology. <br /> - Created a Python tool for extracting and exporting data from Trello boards into Excel files.",
     icon: React.createElement(CgWorkAlt),
     date: "04/2023 – 08/2023",
   },
@@ -69,9 +69,7 @@ export const projectsData = [
     githubLink:
       "https://github.com/VadeanFlaviuAlexandru/Bachelor_Project___Povestea_Lui_HarapAlb",
     imageUrl: Harap,
-    hasImage: true,
-    DemoButton: true,
-    demo: "https://povestea-lui-harap-alb.netlify.app/",
+    demo: null,
   },
   {
     title: "TerraTech",
@@ -80,9 +78,7 @@ export const projectsData = [
     tags: ["React Router & Redux", "TypeScript", "Spring Boot"],
     githubLink: "https://github.com/VadeanFlaviuAlexandru/TerraTech",
     imageUrl: TerraTech,
-    hasImage: true,
-    DemoButton: false,
-    demo: "",
+    demo: null,
   },
 ];
 
@@ -94,10 +90,8 @@ export const projectsDataSecondPage = [
     tags: ["Python", "Streamlit", "AI", "LLMs", "Hugging Face APIs"],
     githubLink:
       "https://github.com/VadeanFlaviuAlexandru/AutomatedExtractionWithChatGPT_With_Research",
-    imageUrl: RockPaperScissors,
-    hasImage: false,
-    DemoButton: false,
-    demo: "",
+    imageUrl: null,
+    demo: null,
   },
   {
     title: "Automated Extraction With Trello",
@@ -106,10 +100,8 @@ export const projectsDataSecondPage = [
     tags: ["Python", "Py-trello", "Trello API", "Pandas DataFrame"],
     githubLink:
       "https://github.com/VadeanFlaviuAlexandru/Bachelor_Project___Povestea_Lui_HarapAlb",
-    imageUrl: RockPaperScissors,
-    hasImage: false,
-    DemoButton: false,
-    demo: "",
+    imageUrl: null,
+    demo: null,
   },
   {
     title: "Rock Paper Scissors ",
@@ -119,8 +111,6 @@ export const projectsDataSecondPage = [
     githubLink:
       "https://github.com/VadeanFlaviuAlexandru/Bachelor_Project___Povestea_Lui_HarapAlb",
     imageUrl: RockPaperScissors,
-    hasImage: true,
-    DemoButton: true,
     demo: "https://therockthepapertheschissors.netlify.app/",
   },
   {
@@ -130,8 +120,6 @@ export const projectsDataSecondPage = [
     tags: ["React", "Responsive"],
     githubLink: "https://github.com/VadeanFlaviuAlexandru/Simple_Calculator",
     imageUrl: Calculator,
-    hasImage: true,
-    DemoButton: true,
     demo: "https://prettysimplecalculator.netlify.app/",
   },
 ];

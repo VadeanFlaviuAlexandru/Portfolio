@@ -2,11 +2,18 @@
 
 import { projectsData } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useRef } from "react";
 import "./project.scss";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = {
+  title: string;
+  description: string;
+  tags: string[];
+  imageUrl: StaticImageData | null;
+  githubLink: string;
+  demo: string | null;
+};
 
 export default function Project({
   title,
@@ -14,9 +21,7 @@ export default function Project({
   tags,
   imageUrl,
   githubLink,
-  DemoButton,
   demo,
-  hasImage,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -36,17 +41,21 @@ export default function Project({
         className={`
         bg-white border-black max-w-[50rem] rounded-lg overflow-hidden
         sm:pr-4 sm:group-even:pr-1 relative sm:h-[20rem] hover:bg-black/10
-        transition ${hasImage ? "sm:group-even:pl-8" : "sm:group-even:pl-0"}
+        transition ${
+          imageUrl !== null ? "sm:group-even:pl-8" : "sm:group-even:pl-0"
+        }
         dark:text-white dark:bg-white/10 dark:hover:bg-white/20
       `}
       >
         <div
           className={`
           pt-5 px-5 sm:pl-5 sm:pr-4 sm:pt-5
-          ${hasImage ? "sm:max-w-[65%]" : "sm:max-w-full"}
+          ${imageUrl !== null ? "sm:max-w-[65%]" : "sm:max-w-full"}
           flex flex-col h-full
           ${
-            hasImage ? "sm:group-even:ml-[17.5rem]" : "sm:group-even:mr-10"
+            imageUrl !== null
+              ? "sm:group-even:ml-[17.5rem]"
+              : "sm:group-even:mr-10"
           } sm:group-even:pr-0
         `}
         >
@@ -76,13 +85,13 @@ export default function Project({
             >
               Read more on Github
             </a>
-            {DemoButton && (
+            {demo !== null && (
               <a
                 className="p-2 rounded-full 
               focus:scale-[1.15] hover:scale-[1.15] 
               active:scale-105 transition cursor-pointer borderBlack 
             text-black max-w-px gradient-animation"
-                href={demo}
+                href={demo == null ? "" : demo}
                 target="_blank"
               >
                 Demo
@@ -90,9 +99,9 @@ export default function Project({
             )}
           </div>
         </div>
-        {hasImage && (
+        {imageUrl !== null && (
           <Image
-            src={imageUrl}
+            src={imageUrl == null ? "" : imageUrl}
             alt="Project I worked on"
             quality={95}
             className="absolute hidden sm:block top-8 -right-40 group-even:w-[28.5rem] w-[27.5rem] rounded-t-lg 
