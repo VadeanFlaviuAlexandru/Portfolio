@@ -16,6 +16,7 @@ export default function Project({
   githubLink,
   DemoButton,
   demo,
+  hasImage,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -32,14 +33,22 @@ export default function Project({
       className="group mb-3 sm:mb-8 last:mb-0"
     >
       <section
-        className="bg-white borderBlack max-w-[50rem]
-        rounded-lg overflow-hidden sm:pr-4 sm:group-even:pr-1 relative sm:h-[20rem] hover:bg-black/10
-        transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 
-       dark:hover:bg-white/20"
+        className={`
+        bg-white border-black max-w-[50rem] rounded-lg overflow-hidden
+        sm:pr-4 sm:group-even:pr-1 relative sm:h-[20rem] hover:bg-black/10
+        transition ${hasImage ? "sm:group-even:pl-8" : "sm:group-even:pl-0"}
+        dark:text-white dark:bg-white/10 dark:hover:bg-white/20
+      `}
       >
         <div
-          className="pt-5 px-5 sm:pl-5 sm:pr-4 sm:pt-5 sm:max-w-[65%] 
-          flex flex-col h-full sm:group-even:ml-[17.5rem] sm:group-even:pr-0"
+          className={`
+          pt-5 px-5 sm:pl-5 sm:pr-4 sm:pt-5
+          ${hasImage ? "sm:max-w-[65%]" : "sm:max-w-full"}
+          flex flex-col h-full
+          ${
+            hasImage ? "sm:group-even:ml-[17.5rem]" : "sm:group-even:mr-10"
+          } sm:group-even:pr-0
+        `}
         >
           <h3 className="text-2xl font-semibold">{title}</h3>
           <ul className="flex flex-wrap mt-1 gap-2 ">
@@ -56,7 +65,7 @@ export default function Project({
           <p className="mt-4 leading-relaxed text-black dark:text-white">
             {description}
           </p>
-          <div className="flex flex-row mt-auto mb-5 gap-5">
+          <div className="flex flex-row mt-auto mb-5 gap-5 max-sm:mt-5">
             <a
               className="bg-white p-2 text-black rounded-full
             focus:scale-[1.15] hover:scale-[1.15] 
@@ -81,17 +90,18 @@ export default function Project({
             )}
           </div>
         </div>
-
-        <Image
-          src={imageUrl}
-          alt="Project I worked on"
-          quality={95}
-          className="absolute hidden sm:block top-8 -right-40 group-even:w-[28.5rem] w-[27.5rem] rounded-t-lg 
+        {hasImage && (
+          <Image
+            src={imageUrl}
+            alt="Project I worked on"
+            quality={95}
+            className="absolute hidden sm:block top-8 -right-40 group-even:w-[28.5rem] w-[27.5rem] rounded-t-lg 
           shadow-2xltransition group-hover:scale-[1.04] group-hover:-translate-x-3 
           first-letter:group-hover:translate-y-3 group-hover:-rotate-2
           group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3
           group-even:group-hover:rotate-2 group-even:right-[initial] group-even:-left-40"
-        />
+          />
+        )}
       </section>
     </motion.div>
   );
