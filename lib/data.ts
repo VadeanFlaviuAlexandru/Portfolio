@@ -64,8 +64,14 @@ export const projectsData = [
   {
     title: "Povestea lui Harap-Alb",
     description:
-      "A full-stack web application featuring authentication, inviting users to play a pixelated top-down 2D game demo inspired by the renowned Romanian folklore, 'Povestea lui Harap-Alb'. Along the way, they can engage in various mini-games to achieve high scores for a chance to appear on the leaderboards.",
-    tags: ["React Router & Redux", "Spring Boot", "Material UI", "Phaser"],
+      "A full-stack web application featuring authentication, where users can play a pixelated top-down 2D game demo inspired by the renowned Romanian folklore, 'Povestea lui Harap-Alb'. A linear game, they can engage in various mini-games to achieve high scores for a chance to appear on the leaderboards.",
+    tags: [
+      "React Router & Redux",
+      "Spring Boot",
+      "Material UI",
+      "Phaser",
+      "PostgreSQL",
+    ],
     githubLink:
       "https://github.com/VadeanFlaviuAlexandru/Bachelor_Project___Povestea_Lui_HarapAlb",
     imageUrl: Harap,
@@ -74,8 +80,8 @@ export const projectsData = [
   {
     title: "TerraTech",
     description:
-      "A full-stack web application simulating the management of a company branch, with distinct user roles, including Admin, Manager, and Employee. The main focus is on user-friendly CRUD operations and comprehensive statistics across multiple teams.",
-    tags: ["React Router & Redux", "TypeScript", "Spring Boot"],
+      "A full-stack web application simulates the management of a company branch, with distinct user roles, including Admin, Manager, and Employee. Each has different responsibilities and restrictions. The main focus is on user-friendly CRUD operations and comprehensive statistics across multiple teams.",
+    tags: ["React Router & Redux", "TypeScript", "Spring Boot", "PostgreSQL"],
     githubLink: "https://github.com/VadeanFlaviuAlexandru/TerraTech",
     imageUrl: TerraTech,
     demo: null,

@@ -19,6 +19,10 @@ export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
+  const openPDF = () => {
+    window.open("/cv/cv.pdf", "_blank");
+  };
+
   return (
     <section
       ref={ref}
@@ -109,7 +113,8 @@ export default function Intro() {
           gap-2 rounded-full outline-none focus:scale-110 
           hover:scale-110 active:scale-105 transition cursor-pointer 
           borderBlack dark:bg-white/10 dark:text-white"
-          href="../../public/cv.pdf"
+          href="#"
+          onClick={openPDF}
         >
           Check my CV
           <BsFillPersonLinesFill className="dark:text-white group-hover:translate-x-2 transition" />

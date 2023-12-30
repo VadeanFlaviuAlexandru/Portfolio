@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["./typings", "./node_modules/@types"],
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -23,6 +25,12 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "public/Alex.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "public/Alex.jsx"
+  ],
   "exclude": ["node_modules"]
 }
