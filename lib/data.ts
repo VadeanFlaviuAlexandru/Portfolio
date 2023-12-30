@@ -54,7 +54,7 @@ export const experiencesData = [
     title: "Intern - Full-Stack Web Developer",
     location: "Cicada Technologies",
     description:
-      "- Developed and tested components and features for Next.js projects, while also handling backend development using Python, REST APIs, and PostgreSQL. <br /> - Developed an automatic program using Python that utilizes AI to extract specific data from PDF and Excel files, alongside studying the technology. <br /> - Created a Python tool for extracting and exporting data from Trello boards into Excel files.",
+      "- Developed and tested components and features for Next.js projects, while also handling backend development using Python, REST APIs, and PostgreSQL. <br /> - Developed a web application using Python that utilizes AI to extract specific data from given PDF files and calculate probabilities based on provided Excel files, alongside studying the technology. <br /> - Created a Python tool for extracting and exporting data from Trello boards into Excel files.",
     icon: React.createElement(CgWorkAlt),
     date: "04/2023 – 08/2023",
   },
@@ -69,7 +69,7 @@ export const projectsData = [
     githubLink:
       "https://github.com/VadeanFlaviuAlexandru/Bachelor_Project___Povestea_Lui_HarapAlb",
     imageUrl: Harap,
-    demo: null,
+    demo: "https://povestea-lui-harap-alb.netlify.app/",
   },
   {
     title: "TerraTech",
@@ -80,9 +80,6 @@ export const projectsData = [
     imageUrl: TerraTech,
     demo: null,
   },
-];
-
-export const projectsDataSecondPage = [
   {
     title: "PDF and XLS Summarization With ChatGPT and Hugging Face",
     description:
@@ -103,6 +100,9 @@ export const projectsDataSecondPage = [
     imageUrl: null,
     demo: null,
   },
+];
+
+export const projectsDataSecondPage = [
   {
     title: "Rock Paper Scissors ",
     description:
