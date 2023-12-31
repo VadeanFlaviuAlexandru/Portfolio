@@ -11,9 +11,44 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import SectionHeading from "../generic-components/section-heading";
 
+interface ExperienceItem {
+  title: string;
+  location: string;
+  description: string;
+  icon: React.ReactElement;
+  date: string;
+}
+
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
   const { theme } = useTheme();
+
+  function applyGradientsToStrings(description: string): React.ReactNode {
+    const gradientStrings: string[] = [
+      "graduated",
+      "Covered the basics in various programming languages",
+      "apprenticeship program to gain foundational knowledge",
+      "Developed and tested components and features for Next.js projects",
+      "handling backend development",
+      "utilizes AI",
+      "studying the technology.",
+      "Created a Python tool",
+    ];
+
+    let result = description;
+
+    gradientStrings.forEach((gradientString) => {
+      const regex = new RegExp(gradientString, "g");
+      const replacement = `<span class="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">${gradientString}</span>`;
+      result = result.replace(regex, replacement);
+    });
+
+    return (
+      <div>
+        <span dangerouslySetInnerHTML={{ __html: result }} />
+      </div>
+    );
+  }
 
   return (
     <section id="experience" ref={ref} className="font-mulish scroll-mt-28">
@@ -47,10 +82,7 @@ export default function Experience() {
             >
               <h3 className="font-bold capitalize text-lg">{item.title}</h3>
               <p className="!font-bold !mt-0 !text-base">{item.location}</p>
-              <p
-                className="!mt-1 !font-normal text-black dark:text-white"
-                dangerouslySetInnerHTML={{ __html: item.description }}
-              />
+              {applyGradientsToStrings(item.description)}
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
