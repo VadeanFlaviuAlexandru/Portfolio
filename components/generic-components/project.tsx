@@ -40,7 +40,7 @@ export default function Project({
       <section
         className={`
         bg-white border-black max-w-[50rem] rounded-lg overflow-hidden
-        sm:pr-4 sm:group-even:pr-1 relative sm:h-[20rem] hover:bg-black/10
+        sm:pr-4 sm:group-even:pr-1 relative sm:h-[21rem] hover:bg-black/10
         transition ${
           imageUrl !== null ? "sm:group-even:pl-8" : "sm:group-even:pl-0"
         }
