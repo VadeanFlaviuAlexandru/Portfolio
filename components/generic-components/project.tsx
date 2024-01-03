@@ -15,6 +15,41 @@ type ProjectProps = {
   demo: string | null;
 };
 
+const GradientText: React.FC<{ text: string }> = ({ text }) => {
+  const gradientPairs = [
+    "A full-stack web application",
+    "top-down 2D game demo",
+    "distinct user roles",
+    "different responsibilities and restrictions",
+    "CRUD operations and comprehensive statistics",
+    "artificial intelligence, large language models",
+    "summarizing",
+    "calculating probabilities",
+    "I developed a script",
+    "rock-paper-scissors game",
+    "client-side storage",
+    "working calculator",
+    "day and night theme toggle button.",
+  ];
+
+  return (
+    <span>
+      {text.split(new RegExp(`(${gradientPairs.join("|")})`)).map((part, i) => (
+        <span
+          key={i}
+          className={
+            gradientPairs.includes(part)
+              ? "font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"
+              : ""
+          }
+        >
+          {part}
+        </span>
+      ))}
+    </span>
+  );
+};
+
 export default function Project({
   title,
   description,
@@ -72,7 +107,7 @@ export default function Project({
             ))}
           </ul>
           <p className="mt-4 leading-relaxed text-black dark:text-white">
-            {description}
+            <GradientText text={description} />{" "}
           </p>
           <div className="flex flex-row mt-auto mb-5 gap-5 max-sm:mt-5">
             <a

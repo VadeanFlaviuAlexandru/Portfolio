@@ -83,6 +83,23 @@ export default function Projects() {
           </button>
         </motion.div>
       )}
+      {secondPage && (
+        <motion.div
+          ref={refer}
+          style={{ scale: scaleProgess, opacity: opacityProgess }}
+          className="flex justify-center items-center"
+        >
+          <p className="max-w-[40rem] text-center leading-8 mt-20 text-2xl">
+            I have a few even older projects, but they are relatively simple.
+            While{" "}
+            <span className="font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              I did contribute to group projects
+            </span>{" "}
+            during my time at the faculty, they remain incomplete. If you're
+            curious, you can find them on my GitHub!
+          </p>
+        </motion.div>
+      )}
     </section>
   );
 }

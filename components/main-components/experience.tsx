@@ -33,6 +33,7 @@ export default function Experience() {
       "utilizes AI",
       "studying the technology.",
       "Created a Python tool",
+      "Developed several CRUD projects",
     ];
 
     let result = description;
