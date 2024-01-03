@@ -30,6 +30,7 @@ const GradientText: React.FC<{ text: string }> = ({ text }) => {
     "client-side storage",
     "working calculator",
     "day and night theme toggle button.",
+    "Using Python",
   ];
 
   return (
