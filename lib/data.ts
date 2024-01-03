@@ -102,7 +102,7 @@ export const projectsData = [
       "I had a solo project to which I was assigned in the middle of my internship at Cicada Technologies. The goal of the project was to retrieve data from a Trello board and exporting it to an Excel file. The initial phase involved conducting a brief research study. Using Python togheter with the py-trello library, I developed a script for retrieving the data. I utilized pandas to export the acquired data to an XLS file.",
     tags: ["Python", "Py-trello", "Trello API", "Pandas DataFrame"],
     githubLink:
-      "https://github.com/VadeanFlaviuAlexandru/Bachelor_Project___Povestea_Lui_HarapAlb",
+      "https://github.com/VadeanFlaviuAlexandru/AutomatedExtractionWithTrello",
     imageUrl: null,
     demo: null,
   },
@@ -114,8 +114,7 @@ export const projectsDataSecondPage = [
     description:
       "My first personal project aimed to understand CSS, HTML, and JavaScript—a local rock-paper-scissors game implemented in JavaScript, featuring client-side storage and incorporating various fun packages.",
     tags: ["JavaScript", "Dexie.js", "Bootstrap"],
-    githubLink:
-      "https://github.com/VadeanFlaviuAlexandru/Bachelor_Project___Povestea_Lui_HarapAlb",
+    githubLink: "https://github.com/VadeanFlaviuAlexandru/RockPaperScissors",
     imageUrl: RockPaperScissors,
     demo: "https://therockthepapertheschissors.netlify.app/",
   },
