@@ -80,7 +80,7 @@ export const projectsData = [
   {
     title: "TerraTech",
     description:
-      "A full-stack web application simulates the management of a company branch, with distinct user roles, including Admin, Manager, and Employee. Each has different responsibilities and restrictions. The main focus is on user-friendly CRUD operations and comprehensive statistics across multiple teams.",
+      "A full-stack web application simulates the management of a company branch, with distinct user roles, including Admin, Manager, and Employee. Each has different responsibilities and restrictions, the focus being on user-friendly CRUD operations and wide statistics across multiple teams.",
     tags: ["React Router & Redux", "TypeScript", "Spring Boot", "PostgreSQL"],
     githubLink: "https://github.com/VadeanFlaviuAlexandru/TerraTech",
     imageUrl: TerraTech,
