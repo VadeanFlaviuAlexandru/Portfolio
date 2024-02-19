@@ -2,6 +2,7 @@ import Harap from "@/public/projects/Harap.png";
 import RockPaperScissors from "@/public/projects/RockPaperScissors.png";
 import TerraTech from "@/public/projects/TerraTech.png";
 import Calculator from "@/public/projects/Calculator.png";
+import Gordon from "@/public/projects/Gordon.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
@@ -105,6 +106,16 @@ export const projectsData = [
       "https://github.com/VadeanFlaviuAlexandru/AutomatedExtractionWithTrello",
     imageUrl: null,
     demo: null,
+  },
+  {
+    title: "Gordon Ramsay Simulator-ish Demo",
+    description:
+      "A simple and personal project made in Next.js, where you present Gordon Ramsay with a picture of your favourite food. Based on the image, he will give different responses. The main objective was to understand how to implement HuggingFace's Large Language Models, while also uing their JavaScript libraries, such as inference and agents.",
+    tags: ["AI", "LLMs", "Hugging Face APIs", "Next.js"],
+    githubLink:
+      "https://github.com/VadeanFlaviuAlexandru/Gordon-Ramsay-Simulator-ish-Demo",
+    imageUrl: Gordon,
+    demo: "https://gordon-ramsay-sim-demo.netlify.app/",
   },
 ];
 
