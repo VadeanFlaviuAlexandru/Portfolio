@@ -2,7 +2,7 @@ import Harap from "@/public/projects/Harap.png";
 import RockPaperScissors from "@/public/projects/RockPaperScissors.png";
 import TerraTech from "@/public/projects/TerraTech.png";
 import Calculator from "@/public/projects/Calculator.png";
-import Gordon from "@/public/projects/Gordon.png";
+import Gordon from "@/public/projects/GordonRamsay.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
