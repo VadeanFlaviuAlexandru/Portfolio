@@ -31,6 +31,8 @@ const GradientText: React.FC<{ text: string }> = ({ text }) => {
     "working calculator",
     "day and night theme toggle button.",
     "Using Python",
+    "HuggingFace's Large Language Models",
+    "JavaScript libraries, such as inference and agents",
   ];
 
   return (
