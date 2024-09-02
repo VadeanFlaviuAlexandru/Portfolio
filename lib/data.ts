@@ -59,6 +59,14 @@ export const experiencesData = [
     icon: React.createElement(CgWorkAlt),
     date: "04/2023 – 08/2023",
   },
+  {
+    title: "Intern - Full-Stack Web Developer",
+    location: "FundMore.ai",
+    description:
+      "- Created new features and fixed bugs for a startup using Angular, Nest.js, Sequelize, AWS, and TypeScript. <br /> - Contributed to the expansion of a custom machine learning model using Google’s Vertex AI.",
+    icon: React.createElement(CgWorkAlt),
+    date: "07/2024 – 08/2024",
+  },
 ] as const;
 
 export const projectsData = [
@@ -160,6 +168,7 @@ export const skillsDataPast = [
   "Angular",
   "Tailwind",
   "Python",
+  "Nest.js",
   "PostgreSQL",
   "Docker",
   "RabbitMQ",

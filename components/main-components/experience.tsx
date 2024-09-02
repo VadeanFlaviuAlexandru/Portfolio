@@ -34,6 +34,8 @@ export default function Experience() {
       "studying the technology.",
       "Created a Python tool",
       "Developed several CRUD projects",
+      "Angular, Nest.js, Sequelize, AWS, and TypeScript.",
+      "Google’s Vertex AI.",
     ];
 
     let result = description;
